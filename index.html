@@ -63,6 +63,19 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" />
     </noscript>
+
+    <!-- Theme Initializer: prevents flash of wrong theme on load -->
+    <script>
+      (function() {
+        try {
+          var localTheme = localStorage.getItem('theme');
+          var sysTheme = window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (localTheme === 'light' || (!localTheme && sysTheme)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <noscript>

@@ -1,0 +1,22 @@
+.toggleBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--r-sm);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: border-color var(--ease), transform var(--ease);
+  flex-shrink: 0;
+  margin-left: var(--sp-4);
+}
+
+.toggleBtn:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}

@@ -73,6 +73,27 @@ a    { text-decoration: none; }
   --ease-lg:0.28s ease;
 }
 
+/* ── Light Mode Overrides ── */
+/* To tweak colors later, change the hex codes inside this block */
+[data-theme="light"] {
+  --bg:           #f7f7f5;
+  --surface:      #ffffff;
+  --border:       #e5e7eb;
+  --border-hover: #d1d5db;
+
+  /* We keep the accent indigo, just slightly darkened for contrast */
+  --accent:       #4f46e5;
+  --accent-light: #4338ca;
+  --accent-dim:   rgba(79, 70, 229, 0.08);
+  --accent-glow:  rgba(79, 70, 229, 0.15);
+
+  --text:         #111418;
+  --text-2:       #4b5563;
+  --text-3:       #6b7280;
+
+  --green:        #16a34a;
+}
+
 /* ── Body ── */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -81,6 +102,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  transition: background-color var(--ease), color var(--ease);
   /* Single, very subtle radial glow — top-left only, low opacity */
   background-image: radial-gradient(
     ellipse 80% 50% at 0% -10%,
