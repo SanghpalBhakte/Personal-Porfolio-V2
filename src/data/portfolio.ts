@@ -73,7 +73,7 @@ export const SYSTEMS = [
     title: 'Travel Agency Workflow Automation',
     description: 'Makes travel agency tasks run almost automatically by auto-fetching info, filling in details, and handling routine messages in the background.',
     tags: ['RAG Pipeline', 'Automation', 'Background Tasks'],
-    link: '#projects',
+    link: '#project-travel-rag',
   },
 ];
 
@@ -99,10 +99,18 @@ export const PROJECTS = [
   },
   {
     id: 'student-os', icon: '🎓',
-    title: 'Student Productivity OS', client: 'Personal Project',
+    title: 'Student Productivity & Personal Systems (CampusOS)', client: 'Personal Project',
     category: 'Campus Tools' as const,
     tags: ['Notion', 'Todoist', 'Integrations'],
-    description: 'A no-nonsense, unified workspace syncing Notion and Todoist to manage academic tasks and projects efficiently.',
+    description: 'Student workflow layer that cuts app chaos and makes it clear what to do today instead of juggling five tools.',
+    links: [],
+  },
+  {
+    id: 'travel-rag', icon: '⚙️',
+    title: 'Travel Agency Workflow Automation (RAG pipeline, etc.)', client: 'Travel Agency',
+    category: 'AI & Automation' as const,
+    tags: ['RAG Pipeline', 'Workflow Automation'],
+    description: 'Itinerary + info handled automatically so staff stop copy-pasting.',
     links: [],
   },
   {
