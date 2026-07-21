@@ -52,6 +52,7 @@ export default function Footer({ meta }: FooterProps) {
 
         {/* Closing statement */}
         <div className={styles.cta}>
+          <p className="eyebrow" aria-hidden="true">CONNECT</p>
           <h2 className={styles.ctaHeading}>Let's build something.</h2>
           <p className={styles.ctaSub}>
             Find me on — or just look at my code.

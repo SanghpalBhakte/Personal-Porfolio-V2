@@ -16,7 +16,7 @@ export default function Projects() {
 
         {/* Section header */}
         <header className={styles.header}>
-          <p className="eyebrow" aria-hidden="true">Selected Work &amp; Case Studies</p>
+          <p className="eyebrow" aria-hidden="true">SELECTED WORK</p>
           <h2 id="projects-heading" className={styles.title}>
             Projects
           </h2>

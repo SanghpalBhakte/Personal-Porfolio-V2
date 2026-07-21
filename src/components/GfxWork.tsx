@@ -38,6 +38,7 @@ export default function GfxWork() {
                   src={project.image}
                   alt={`${project.title} cover`}
                   loading="lazy"
+                  decoding="async"
                   className={styles.image}
                 />
                 <div className={styles.overlay}>

@@ -6,6 +6,7 @@
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 5rem; }
 img  { max-width: 100%; display: block; }
 ul   { list-style: none; }
 a    { text-decoration: none; }
@@ -200,7 +201,8 @@ code {
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: var(--sp-8);
-  transition: border-color var(--ease-lg), box-shadow var(--ease-lg);
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease, box-shadow 0.24s ease;
+  will-change: transform;
 }
 .card:hover {
   border-color: var(--border-hover);

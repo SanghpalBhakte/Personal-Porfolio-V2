@@ -12,7 +12,7 @@ export default function Services({ services }: ServicesProps) {
 
         {/* Section header */}
         <header className={styles.header}>
-          <p className="eyebrow" aria-hidden="true">What I Build</p>
+          <p className="eyebrow" aria-hidden="true">CAPABILITIES</p>
           <h2 id="services-heading" className={styles.title}>
             Capabilities
           </h2>
