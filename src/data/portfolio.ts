@@ -178,7 +178,7 @@ export const GFX_PROJECTS = [
     title: 'Twitter Headers',
     description: 'Custom branding and banner design for Twitter profiles.',
     url: 'https://www.behance.net/gallery/113023791/Twitter-Headers',
-    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/465a3a113023791.Y3JvcCw9NjUsNzU0LDkwNSww.jpg'
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/465a3a113023791.Y3JvcCw5NjUsNzU0LDkwNSww.jpg'
   },
   {
     id: 'irl-thumbnails',
