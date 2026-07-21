@@ -9,6 +9,12 @@
   margin-bottom: var(--sp-2);
 }
 
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
 /* ── Filter row ── */
 .filters {
   display: flex;

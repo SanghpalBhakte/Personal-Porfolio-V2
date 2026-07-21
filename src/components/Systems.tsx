@@ -9,8 +9,8 @@ export default function Systems({ systems }: SystemsProps) {
   return (
     <section className={`${styles.systemsSection} container`} id="systems" aria-labelledby="systems-heading">
       <header className="section-header">
-        <span className="eyebrow" aria-hidden="true">THE ENGINE ROOM</span>
-        <h2 id="systems-heading">Systems I Build</h2>
+        <p className="eyebrow" aria-hidden="true">Systems I Build</p>
+        <h2 id="systems-heading">The background workflows running quietly.</h2>
       </header>
 
       <ul className={styles.grid}>

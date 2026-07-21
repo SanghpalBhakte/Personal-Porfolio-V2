@@ -20,6 +20,9 @@ export default function Projects() {
           <h2 id="projects-heading" className={styles.title}>
             Projects
           </h2>
+          <p className={styles.subtitle}>
+            Things I've built, automated, or designed.
+          </p>
         </header>
 
         {/* Filter tabs */}
