@@ -83,10 +83,10 @@ export const PROJECT_FILTERS: ProjectCategory[] = ['All', 'Web App', 'AI & Autom
 export const PROJECTS = [
   {
     id: 'janai-tours', icon: '🤖',
-    title: 'Janai Tours — AI Chatbot System', client: 'Janai Tours & Travels',
+    title: 'Janai Tours & Travels — Chatbot & Follow-up Workflow', client: 'Janai Tours & Travels',
     category: 'AI & Automation' as const,
     tags: ['AI Chatbot', 'n8n', 'WhatsApp API'],
-    description: 'A practical WhatsApp and Telegram bot that handles customer queries and captures leads 24/7, reducing manual support workload.',
+    description: 'WhatsApp bot + reminder system so leads don’t die in the inbox.',
     links: [{ label: 'GitHub', href: 'https://github.com/SanghpalBhakte' }],
   },
   {
