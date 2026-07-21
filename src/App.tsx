@@ -1,5 +1,6 @@
 import Nav, { SkipLink }  from './components/Nav';
 import Hero               from './components/Hero';
+import Systems            from './components/Systems';
 import Services           from './components/Services';
 import Projects           from './components/Projects';
 import About              from './components/About';
@@ -8,6 +9,7 @@ import Footer             from './components/Footer';
 import {
   SITE_META,
   STATS,
+  SYSTEMS,
   SERVICES,
   SKILLS,
   BIO_PARAGRAPHS,
@@ -34,6 +36,11 @@ export default function App() {
 
         {/* 1. Hero */}
         <Hero meta={SITE_META} stats={STATS} />
+
+        <hr className="section-rule" aria-hidden="true" />
+
+        {/* 2. Systems I Build */}
+        <Systems systems={SYSTEMS} />
 
         <hr className="section-rule" aria-hidden="true" />
 
