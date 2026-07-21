@@ -81,10 +81,9 @@
   margin-top: var(--sp-2);
 }
 
-/* ── Socials ── */
 .socials {
   display: flex;
-  gap: var(--sp-5);
+  gap: var(--sp-2);
   flex-wrap: wrap;
   margin-top: var(--sp-2);
 }
@@ -93,14 +92,19 @@
   font-size: var(--text-sm);
   font-weight: 500;
   color: var(--text-3);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  transition: color var(--ease), border-color var(--ease);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: var(--sp-2) var(--sp-4);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--ease), border-color var(--ease), background-color var(--ease);
 }
 
 .socialLink:hover {
-  color: var(--accent);
+  color: var(--accent-light);
   border-color: var(--accent);
+  background: var(--accent-dim);
 }
 
 /* ── Stats strip ── */
@@ -120,6 +124,6 @@
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .hero { padding: var(--sp-24) 0 var(--sp-10); } /* Reduced bottom padding for mobile flow */
-  .stats { gap: var(--sp-8); }
+  .hero { padding: var(--sp-12) 0 var(--sp-8); } /* Tightened top/bottom padding for mobile flow */
+  .stats { gap: var(--sp-6); margin-top: var(--sp-6); padding-top: var(--sp-6); }
 }

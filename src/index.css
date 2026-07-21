@@ -13,21 +13,21 @@ a    { text-decoration: none; }
 /* ── Tokens ── */
 :root {
   /* Background */
-  --bg:           #09090b;   /* near-black zinc */
-  --surface:      #111113;   /* cards / nav     */
-  --border:       rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.16);
+  --bg:           #0a0b10;   /* rich obsidian/indigo tint */
+  --surface:      #12131a;   /* elevated surface tile     */
+  --border:       rgba(255, 255, 255, 0.09);
+  --border-hover: rgba(99, 102, 241, 0.28);
 
-  /* Accent — single indigo, no competing colours */
+  /* Accent — single refined indigo */
   --accent:       #6366f1;
   --accent-light: #818cf8;
-  --accent-dim:   rgba(99, 102, 241, 0.10);
-  --accent-glow:  rgba(99, 102, 241, 0.18);
+  --accent-dim:   rgba(99, 102, 241, 0.12);
+  --accent-glow:  rgba(99, 102, 241, 0.22);
 
   /* Text — three-level hierarchy */
-  --text:         #fafafa;
-  --text-2:       #a1a1aa;   /* secondary / body */
-  --text-3:       #71717a;   /* subtle / labels  */
+  --text:         #f8fafc;
+  --text-2:       #94a3b8;   /* secondary / body */
+  --text-3:       #64748b;   /* subtle / labels  */
 
   /* Feedback */
   --green:        #4ade80;
@@ -62,7 +62,7 @@ a    { text-decoration: none; }
   --text-2xl:  1.5rem;     /* 24px  — section subtitles*/
   --text-3xl:  1.875rem;   /* 30px  — section headings */
   --text-4xl:  2.25rem;    /* 36px  — hero h1 minimum  */
-  --text-hero: clamp(2.5rem, 6vw, 4rem);  /* responsive hero */
+  --text-hero: clamp(2.1rem, 5.5vw, 3.75rem);  /* mobile-first responsive hero */
 
   /* Layout */
   --maxw:   1024px;
@@ -74,22 +74,21 @@ a    { text-decoration: none; }
 }
 
 /* ── Light Mode Overrides ── */
-/* To tweak colors later, change the hex codes inside this block */
 [data-theme="light"] {
-  --bg:           #f7f7f5;
-  --surface:      #ffffff;
-  --border:       #e5e7eb;
-  --border-hover: #d1d5db;
+  --bg:           #f8fafc;   /* clean slate-50 background */
+  --surface:      #ffffff;   /* pure white elevated tile  */
+  --border:       #e2e8f0;   /* crisp slate border       */
+  --border-hover: #cbd5e1;
 
-  /* We keep the accent indigo, just slightly darkened for contrast */
+  /* Accent */
   --accent:       #4f46e5;
   --accent-light: #4338ca;
   --accent-dim:   rgba(79, 70, 229, 0.08);
   --accent-glow:  rgba(79, 70, 229, 0.15);
 
-  --text:         #111418;
-  --text-2:       #4b5563;
-  --text-3:       #6b7280;
+  --text:         #0f172a;   /* slate-900 high contrast   */
+  --text-2:       #475569;   /* slate-600 secondary body */
+  --text-3:       #64748b;   /* slate-500 subtle label   */
 
   --green:        #16a34a;
 }

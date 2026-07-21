@@ -31,10 +31,12 @@
 .menuToggle {
   display: none;
   background: transparent;
-  border: none;
+  border: 1px solid var(--border);
   color: var(--text);
-  padding: var(--sp-2);
-  margin-right: calc(-1 * var(--sp-2)); /* offset padding to align right edge */
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border-radius: var(--r-sm);
 }
@@ -82,9 +84,11 @@
   }
   
   .navLink {
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: var(--text-base);
-    padding: var(--sp-4) 0;
+    min-height: 44px;
+    padding: var(--sp-3) 0;
     border-bottom: 1px solid var(--border);
   }
   
