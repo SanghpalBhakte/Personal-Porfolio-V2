@@ -8,7 +8,7 @@ export const SITE_META = {
   name:            'Sanghpal Bhakte',
   title:           'Full-Stack & AI Automation Developer',
   headline:        'I build the boring systems\nthat make everything else work.',
-  subheadline:     'Student and builder from Chhatrapati Sambhajinagar, India, focused on workflow automation, AI chatbots and agents, and website development. I care more about whether a system actually works than how impressive it sounds — practical, budget-conscious, and built to be used.',
+  subheadline:     'Shipping real automation, chatbots, and workflows for small teams while still in my second year — useful now, internship‑ready later.',
   proofPoint:      'Currently building and powering active systems for Janai Tours & Travels and personal workflows like CampusOS.',
   location:        'Chhatrapati Sambhajinagar, India',
   available:       true,
