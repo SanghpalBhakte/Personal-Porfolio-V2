@@ -3,6 +3,7 @@ import Hero               from './components/Hero';
 import Systems            from './components/Systems';
 import Services           from './components/Services';
 import Projects           from './components/Projects';
+import GfxWork            from './components/GfxWork';
 import About              from './components/About';
 import Footer             from './components/Footer';
 
@@ -18,6 +19,7 @@ import {
 const NAV_LINKS = [
   { label: 'Build',    href: '#services' },
   { label: 'Work',     href: '#projects' },
+  { label: 'GFX',      href: '#gfx'      },
   { label: 'About',    href: '#about'    },
   { label: 'Connect',  href: '#connect'  },
 ];
@@ -52,7 +54,12 @@ export default function App() {
 
         <hr className="section-rule" aria-hidden="true" />
 
-        {/* 4. About */}
+        {/* 4. GFX Work */}
+        <GfxWork />
+
+        <hr className="section-rule" aria-hidden="true" />
+
+        {/* 5. About */}
         <About meta={SITE_META} skills={SKILLS} bio={BIO_PARAGRAPHS} />
 
       </main>

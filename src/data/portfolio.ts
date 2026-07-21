@@ -133,3 +133,41 @@ export const SKILLS: Record<string, string[]> = {
 export const BIO_PARAGRAPHS = [
   "I’m a student and builder from <strong>Chhatrapati Sambhajinagar, India</strong>. Most of my time goes into making sure a flow actually works in the real world: I test automation paths, chatbot conversations, and tiny edge cases obsessively before shipping so people can just use the system without thinking about it."
 ];
+
+export const GFX_PROJECTS = [
+  {
+    id: 'esummit-showcase',
+    title: 'E-Summit | Social Media & Graphic Design Showcase',
+    description: 'Visual identity & social graphics for college E-Summit.',
+    url: 'https://www.behance.net/gallery/252873023/E-Summit-Social-Media-Graphic-Design-Showcase',
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/fd5efd252873023.Y3JvcCwzMzc1LDI2MzksMCw5Mjc.jpg'
+  },
+  {
+    id: 'valorant-thumbnails',
+    title: 'Valorant Thumbnails',
+    description: 'High-CTR YouTube thumbnail designs for esports creators.',
+    url: 'https://www.behance.net/gallery/119930005/Valorant-Thumbnails',
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/aba6d6119930005.Y3JvcCwxMDkwLDg1MywwLDA.jpg'
+  },
+  {
+    id: 'twitter-headers',
+    title: 'Twitter Headers',
+    description: 'Custom branding and banner design for Twitter profiles.',
+    url: 'https://www.behance.net/gallery/113023791/Twitter-Headers',
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/465a3a113023791.Y3JvcCw5NjUsNzU0LDkwNSww.jpg'
+  },
+  {
+    id: 'irl-thumbnails',
+    title: 'IRL Thumbnails',
+    description: 'Vlog and lifestyle video thumbnail design.',
+    url: 'https://www.behance.net/gallery/112701177/IRL-Thumbnails',
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/c7ec01112701177.Y3JvcCw1MzEsNDE1LDQ1NSwxNQ.png'
+  },
+  {
+    id: 'fortnite-thumbnails',
+    title: 'Fortnite Thumbnails',
+    description: 'Vibrant gaming thumbnail assets and graphics.',
+    url: 'https://www.behance.net/gallery/110221073/Fortnite-Thumbnails',
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/20a210110221073.Y3JvcCwxMDA3LDc4OCwzODksMA.png'
+  }
+];
