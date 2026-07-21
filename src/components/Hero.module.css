@@ -67,6 +67,16 @@
   max-width: 65ch; /* Comfortable reading length */
 }
 
+/* ── Proof Point ── */
+.proofPoint {
+  font-size: var(--text-sm);
+  color: var(--text-3);
+  font-weight: 500;
+  border-left: 2px solid var(--accent);
+  padding-left: var(--sp-3);
+  margin-top: calc(-1 * var(--sp-2));
+}
+
 /* ── Location ── */
 .location {
   font-size: var(--text-sm);

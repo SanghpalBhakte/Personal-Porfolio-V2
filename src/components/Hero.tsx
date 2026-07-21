@@ -32,6 +32,13 @@ export default function Hero({ meta, stats }: HeroProps) {
           {meta.subheadline}
         </p>
 
+        {/* Proof Point */}
+        {meta.proofPoint && (
+          <p className={styles.proofPoint}>
+            {meta.proofPoint}
+          </p>
+        )}
+
         {/* Location */}
         <p className={styles.location}>
           <span aria-hidden="true">📍</span>{' '}
