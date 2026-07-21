@@ -15,7 +15,7 @@ export default function Systems({ systems }: SystemsProps) {
 
       <ul className={styles.grid}>
         {systems.map((sys) => (
-          <li key={sys.id} className="card">
+          <li key={sys.id} className="card" style={{ display: 'flex', flexDirection: 'column' }}>
             <h3 className={styles.title}>{sys.title}</h3>
             <p className={styles.desc}>{sys.description}</p>
             <ul className={styles.tags} aria-label={`Tags for ${sys.title}`}>
@@ -25,6 +25,11 @@ export default function Systems({ systems }: SystemsProps) {
                 </li>
               ))}
             </ul>
+            {sys.link && (
+              <a href={sys.link} className={`btn btn-ghost ${styles.link}`}>
+                View details ↗
+              </a>
+            )}
           </li>
         ))}
       </ul>

@@ -59,18 +59,21 @@ export const SYSTEMS = [
     title: 'Janai Tours & Travels — Chatbot & Lead Workflow',
     description: 'A simple background pipeline that handles repetitive questions and catches missed leads via WhatsApp, ensuring no customer falls through the cracks.',
     tags: ['AI Agents', 'Chatbots', 'WhatsApp API', 'Lead Automation'],
+    link: '#project-janai-tours',
   },
   {
     id: 'campus-os',
     title: 'Student Productivity Systems (CampusOS)',
     description: 'A quiet system connecting Notion and Todoist. It automates academic tracking so you can focus on actually studying instead of organizing tasks.',
     tags: ['Productivity', 'Notion API', 'Integrations', 'Workflow'],
+    link: '#project-student-os',
   },
   {
     id: 'travel-rag',
     title: 'Travel Agency Workflow Automation',
     description: 'A practical retrieval pipeline that instantly pulls travel data to assemble itineraries, turning hours of manual research into a few seconds of work.',
     tags: ['RAG Pipeline', 'Workflow Automation', 'Data Retrieval'],
+    link: '#projects',
   },
 ];
 

@@ -41,6 +41,7 @@ export default function Projects() {
           {filtered.map((project, idx) => (
             <li 
               key={project.id} 
+              id={`project-${project.id}`}
               className={`card ${styles.card}`}
               style={{ animationDelay: `${idx * 0.05}s` }}
             >
