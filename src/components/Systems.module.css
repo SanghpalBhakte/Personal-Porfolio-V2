@@ -1,36 +1,29 @@
 .systemsSection {
   padding-top: var(--sp-12);
   padding-bottom: var(--sp-16);
+  background: rgba(99, 102, 241, 0.02);
+  border-bottom: 1px solid var(--border);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--sp-6);
   padding: 0;
   margin: 0;
 }
 
-.title {
-  font-size: var(--text-xl);
-  margin-bottom: var(--sp-3);
-  color: var(--text);
-  line-height: 1.35;
-}
-
-.desc {
-  font-size: var(--text-sm);
-  color: var(--text-2);
-  margin-bottom: var(--sp-6);
-  line-height: 1.65;
-}
-
-/* Subtle accent line on top of each card to match Hero accent */
 .card {
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  gap: var(--sp-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  transition: border-color var(--ease-lg), box-shadow var(--ease-lg), transform var(--ease-lg);
 }
 
 .card::before {
@@ -39,49 +32,88 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: var(--accent);
-  opacity: 0.3;
+  opacity: 0.6;
   transition: opacity var(--ease);
+}
+
+.card:hover {
+  border-color: var(--accent-light);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.12);
+  transform: translateY(-2px);
 }
 
 .card:hover::before {
   opacity: 1;
 }
 
+.title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fieldLabel {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-light);
+}
+
+.fieldValue {
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  line-height: 1.55;
+}
+
+.outcomeText {
+  font-size: var(--text-sm);
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-2);
-  margin: 0 0 var(--sp-6) 0;
+  margin-top: var(--sp-2);
   padding: 0;
 }
 
 .link {
   margin-top: auto;
   align-self: flex-start;
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   padding: 0;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  color: var(--accent-light);
+  font-weight: 600;
 }
 
 /* ── Responsive Breakpoints ── */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  .systemsSection {
+    padding-top: var(--sp-8);
+    padding-bottom: var(--sp-12);
   }
 }
 
-@media (max-width: 640px) {
-  .systemsSection {
-    padding-top: var(--sp-6);
-    padding-bottom: var(--sp-10);
-  }
-  .grid {
-    grid-template-columns: 1fr;
-    gap: var(--sp-4);
-  }
-}
 
