@@ -1,21 +1,21 @@
-import type { SITE_META, SKILLS, BIO_PARAGRAPHS, BUILDER_PRINCIPLES } from '../data/portfolio';
+import type { SITE_META, SKILLS, BIO_PARAGRAPHS } from '../data/portfolio';
 import styles from './About.module.css';
 
 interface AboutProps {
   meta:       typeof SITE_META;
   skills:     typeof SKILLS;
   bio:        typeof BIO_PARAGRAPHS;
-  principles: typeof BUILDER_PRINCIPLES;
+  principles?: any;
 }
 
-export default function About({ meta, skills, bio, principles }: AboutProps) {
+export default function About({ meta, skills, bio }: AboutProps) {
   return (
     <section className={`section ${styles.section}`} id="about" aria-labelledby="about-heading">
       <div className="container">
 
         <div className={styles.layout}>
 
-          {/* ── Left: Bio & Builder Principles ── */}
+          {/* ── Left: Bio ── */}
           <div className={styles.bioCol}>
             <div className={styles.builderHeader}>
               <div className={styles.avatar} aria-hidden="true">
@@ -36,23 +36,6 @@ export default function About({ meta, skills, bio, principles }: AboutProps) {
                 />
               ))}
             </div>
-
-            {/* How I Work: 3 Bullets */}
-            {principles && principles.length > 0 && (
-              <div className={styles.principlesBlock}>
-                <p className={styles.principlesTitle}>How I Work</p>
-                <ul className={styles.principlesList} role="list">
-                  {principles.map((item, idx) => (
-                    <li key={idx} className={styles.principleItem}>
-                      <span className={styles.checkIcon} aria-hidden="true">✓</span>
-                      <p className={styles.principleText}>
-                        <strong>{item.title}:</strong> {item.detail}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
 
           {/* ── Right: Skills & Identity ── */}

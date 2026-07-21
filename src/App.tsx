@@ -1,6 +1,7 @@
 import Nav, { SkipLink }  from './components/Nav';
 import Hero               from './components/Hero';
 import Systems            from './components/Systems';
+import HowIWork           from './components/HowIWork';
 import Services           from './components/Services';
 import Projects           from './components/Projects';
 import GfxWork            from './components/GfxWork';
@@ -18,11 +19,11 @@ import {
 } from './data/portfolio';
 
 const NAV_LINKS = [
-  { label: 'Build',    href: '#services' },
-  { label: 'Work',     href: '#projects' },
-  { label: 'GFX',      href: '#gfx'      },
-  { label: 'About',    href: '#about'    },
-  { label: 'Connect',  href: '#connect'  },
+  { label: 'Systems',  href: '#systems'    },
+  { label: 'Process',  href: '#how-i-work' },
+  { label: 'Work',     href: '#projects'   },
+  { label: 'GFX',      href: '#gfx'        },
+  { label: 'About',    href: '#about'      },
 ];
 
 export default function App() {
@@ -45,7 +46,12 @@ export default function App() {
 
         <hr className="section-rule" aria-hidden="true" />
 
-        {/* 2. What I Build */}
+        {/* 3. How I Work Mini Section */}
+        <HowIWork />
+
+        <hr className="section-rule" aria-hidden="true" />
+
+        {/* 4. What I Build / Capabilities */}
         <Services services={SERVICES} />
 
         <hr className="section-rule" aria-hidden="true" />
