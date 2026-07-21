@@ -81,6 +81,28 @@
   margin-top: var(--sp-2);
 }
 
+/* ── Socials ── */
+.socials {
+  display: flex;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+  margin-top: var(--sp-2);
+}
+
+.socialLink {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-3);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color var(--ease), border-color var(--ease);
+}
+
+.socialLink:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* ── Stats strip ── */
 .stats {
   display: flex;

@@ -46,15 +46,13 @@ export default function Hero({ meta, stats }: HeroProps) {
           >
             View my work
           </a>
-          <a
-            href={meta.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-            aria-label="Visit Sanghpal's GitHub (opens in new tab)"
-          >
-            GitHub ↗
-          </a>
+        </div>
+
+        {/* Social Links */}
+        <div className={styles.socials} aria-label="Social profiles">
+          <a href={meta.linkedin} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>LinkedIn</a>
+          <a href={meta.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>GitHub</a>
+          <a href={meta.instagram} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>Instagram</a>
         </div>
 
         {/* Stats strip */}
