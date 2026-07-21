@@ -1,3 +1,7 @@
+.systemsSection {
+  padding: var(--sp-8) 0 var(--sp-32) 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,6 +22,30 @@
   color: var(--text-2);
   margin-bottom: var(--sp-6);
   line-height: 1.6;
+}
+
+/* Subtle accent line on top of each card to match Hero accent */
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.3;
+  transition: opacity var(--ease);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .tags {
@@ -43,6 +71,9 @@
 }
 
 @media (max-width: 640px) {
+  .systemsSection {
+    padding: var(--sp-4) 0 var(--sp-24) 0;
+  }
   .grid {
     grid-template-columns: 1fr;
     gap: var(--sp-4);

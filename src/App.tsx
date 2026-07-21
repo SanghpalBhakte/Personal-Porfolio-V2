@@ -37,9 +37,7 @@ export default function App() {
         {/* 1. Hero */}
         <Hero meta={SITE_META} stats={STATS} />
 
-        <hr className="section-rule" aria-hidden="true" />
-
-        {/* 2. Systems I Build */}
+        {/* 2. Systems I Build (flows directly from hero) */}
         <Systems systems={SYSTEMS} />
 
         <hr className="section-rule" aria-hidden="true" />
