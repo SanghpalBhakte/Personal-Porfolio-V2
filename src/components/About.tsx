@@ -17,7 +17,7 @@ export default function About({ meta, skills, bio }: AboutProps) {
           {/* ── Left: Bio ── */}
           <div className={styles.bioCol}>
             <p className="eyebrow" aria-hidden="true">The Builder</p>
-            <h2 id="about-heading" className={styles.title}>About</h2>
+            <h2 id="about-heading" className={styles.title}>About the builder</h2>
 
             <div className={styles.bio}>
               {bio.map((para, i) => (

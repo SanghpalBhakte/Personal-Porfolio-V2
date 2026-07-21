@@ -131,7 +131,5 @@ export const SKILLS: Record<string, string[]> = {
 };
 
 export const BIO_PARAGRAPHS = [
-  "I am a 2nd-year <strong>AI & Data Science</strong> student and builder based in <strong>Chhatrapati Sambhajinagar, India</strong>. I focus on creating systems that are practical, budget-conscious, and built to be used.",
-  "I care more about whether a system actually works than how impressive it sounds. Whether I'm building a fast website, a reliable AI support bot, or orchestrating automated workflows, my goal is to eliminate manual effort and solve real problems.",
-  "I am currently open to <strong>internships</strong> and freelance partnerships. If you need a builder who prioritizes usability and reliability over hype, let's connect through my social links below."
+  "I’m a student and builder from <strong>Chhatrapati Sambhajinagar, India</strong>. Most of my time goes into making sure a flow actually works in the real world: I test automation paths, chatbot conversations, and tiny edge cases obsessively before shipping so people can just use the system without thinking about it."
 ];
