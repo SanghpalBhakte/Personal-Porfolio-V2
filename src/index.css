@@ -1,0 +1,277 @@
+/* ============================================================
+   GLOBAL DESIGN SYSTEM — Minimal, breathable, accessible
+   Strategy: tight token set, generous whitespace, no heavy fx
+   ============================================================ */
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img  { max-width: 100%; display: block; }
+ul   { list-style: none; }
+a    { text-decoration: none; }
+
+/* ── Tokens ── */
+:root {
+  /* Background */
+  --bg:           #09090b;   /* near-black zinc */
+  --surface:      #111113;   /* cards / nav     */
+  --border:       rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+
+  /* Accent — single indigo, no competing colours */
+  --accent:       #6366f1;
+  --accent-light: #818cf8;
+  --accent-dim:   rgba(99, 102, 241, 0.10);
+  --accent-glow:  rgba(99, 102, 241, 0.18);
+
+  /* Text — three-level hierarchy */
+  --text:         #fafafa;
+  --text-2:       #a1a1aa;   /* secondary / body */
+  --text-3:       #71717a;   /* subtle / labels  */
+
+  /* Feedback */
+  --green:        #4ade80;
+
+  /* Shape */
+  --r-sm:  6px;
+  --r:     10px;
+  --r-lg:  16px;
+  --r-pill:9999px;
+
+  /* Spacing scale (use these, never ad-hoc values) */
+  --sp-1:  0.25rem;  /*  4px */
+  --sp-2:  0.5rem;   /*  8px */
+  --sp-3:  0.75rem;  /* 12px */
+  --sp-4:  1rem;     /* 16px */
+  --sp-5:  1.25rem;  /* 20px */
+  --sp-6:  1.5rem;   /* 24px */
+  --sp-8:  2rem;     /* 32px */
+  --sp-10: 2.5rem;   /* 40px */
+  --sp-12: 3rem;     /* 48px */
+  --sp-16: 4rem;     /* 64px */
+  --sp-20: 5rem;     /* 80px */
+  --sp-24: 6rem;     /* 96px */
+  --sp-32: 8rem;     /* 128px */
+
+  /* Typography scale */
+  --text-xs:   0.75rem;    /* 12px  — labels, tags     */
+  --text-sm:   0.875rem;   /* 14px  — small body       */
+  --text-base: 1rem;       /* 16px  — default body     */
+  --text-lg:   1.125rem;   /* 18px  — large body       */
+  --text-xl:   1.25rem;    /* 20px  — card titles      */
+  --text-2xl:  1.5rem;     /* 24px  — section subtitles*/
+  --text-3xl:  1.875rem;   /* 30px  — section headings */
+  --text-4xl:  2.25rem;    /* 36px  — hero h1 minimum  */
+  --text-hero: clamp(2.5rem, 6vw, 4rem);  /* responsive hero */
+
+  /* Layout */
+  --maxw:   1024px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+
+  /* Motion */
+  --ease:   0.18s ease;
+  --ease-lg:0.28s ease;
+}
+
+/* ── Body ── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: var(--text-base);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  /* Single, very subtle radial glow — top-left only, low opacity */
+  background-image: radial-gradient(
+    ellipse 80% 50% at 0% -10%,
+    rgba(99, 102, 241, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+p { color: var(--text-2); }
+
+strong { color: var(--text); font-weight: 600; }
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.88em;
+  background: rgba(99, 102, 241, 0.10);
+  padding: 0.15em 0.45em;
+  border-radius: var(--r-sm);
+  color: var(--accent-light);
+}
+
+/* ── Focus ring — WCAG AA ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--gutter);
+  background: var(--accent);
+  color: #fff;
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: 0 0 var(--r) var(--r);
+  font-weight: 600;
+  z-index: 9999;
+}
+.skip-link:focus { top: 0; }
+
+/* ══════════════════════════════════════════════════════════
+   LAYOUT UTILITIES
+   ══════════════════════════════════════════════════════════ */
+
+/* Page wrapper — constrains all section contents */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Standard section — generous top/bottom breathing room */
+.section { padding: var(--sp-32) 0; }
+
+/* Section header block — centred by default */
+.section-header {
+  margin-bottom: var(--sp-16);
+}
+
+/* Label above a heading (e.g. "WHAT I BUILD") */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: var(--sp-4);
+}
+
+/* Horizontal rule between sections */
+.section-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CARD — minimal surface, no frosted glass
+   ══════════════════════════════════════════════════════════ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-8);
+  transition: border-color var(--ease-lg), box-shadow var(--ease-lg);
+}
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* ══════════════════════════════════════════════════════════
+   TAGS
+   ══════════════════════════════════════════════════════════ */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.tag-accent   { background: var(--accent-dim);          color: var(--accent-light);     border-color: rgba(99,102,241,0.18); }
+.tag-neutral  { background: rgba(255,255,255,0.04);     color: var(--text-2);           border-color: var(--border); }
+
+/* ══════════════════════════════════════════════════════════
+   BUTTONS
+   ══════════════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: var(--r);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--ease);
+}
+.btn:hover   { transform: translateY(-1px); }
+.btn:active  { transform: translateY(0); }
+
+/* Primary — solid accent fill */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 20px var(--accent-glow);
+  color: #fff;
+}
+
+/* Outline — transparent with border */
+.btn-outline {
+  background: transparent;
+  color: var(--text-2);
+  border-color: var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+}
+
+/* Ghost — no border */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-3);
+  border-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-ghost:hover { color: var(--text); }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE HELPERS
+   ══════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .section { padding: var(--sp-20) 0; }
+  .section-header { margin-bottom: var(--sp-10); }
+  .card { padding: var(--sp-6); }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

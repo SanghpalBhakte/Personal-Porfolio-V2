@@ -1,0 +1,103 @@
+/* Hero.module.css */
+
+.hero {
+  /* Ultra-generous breathing room above the fold */
+  padding: var(--sp-32) 0 var(--sp-32);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    /* left-aligned — feels more editorial */
+  gap: var(--sp-6);
+  max-width: 720px;            /* constrain text width for readability */
+}
+
+/* ── Availability badge ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: var(--sp-1) var(--sp-4);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  /* Subtle pulse — accessibility: respects prefers-reduced-motion */
+  animation: pulse 2.4s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ── Heading ── */
+.heading {
+  font-size: var(--text-hero);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.line {
+  display: block;
+}
+
+/* Accent the second line */
+.line:last-child {
+  color: var(--accent-light);
+}
+
+/* ── Sub-heading ── */
+.subheading {
+  font-size: var(--text-lg);
+  color: var(--text-2);
+  line-height: 1.75; /* Extremely breathable line height */
+  max-width: 65ch; /* Comfortable reading length */
+}
+
+/* ── Location ── */
+.location {
+  font-size: var(--text-sm);
+  color: var(--text-3);
+}
+
+/* ── CTA row ── */
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  margin-top: var(--sp-2);
+}
+
+/* ── Stats strip ── */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-10);
+  margin-top: var(--sp-8);
+  padding-top: var(--sp-8);
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+.stat        { display: flex; flex-direction: column; gap: 2px; }
+.statValue   { font-family: 'Space Grotesk', sans-serif; font-size: var(--text-2xl); font-weight: 700; color: var(--text); }
+.statLabel   { font-size: var(--text-sm); color: var(--text-3); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .hero { padding: var(--sp-24) 0 var(--sp-20); } /* Increased mobile padding */
+  .stats { gap: var(--sp-8); }
+}

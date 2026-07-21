@@ -1,0 +1,62 @@
+/* Services.module.css */
+
+.section { /* inherits .section padding from global */ }
+
+.header {
+  max-width: 520px;
+  margin-bottom: var(--sp-12);   /* a little tighter than default — grid provides rest */
+}
+
+.title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--sp-4);
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* ── 2-col grid on medium, 1-col on small ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-6);
+}
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ── Card internals ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.cardDesc {
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  line-height: 1.65;
+  flex: 1;   /* push stack tags to bottom */
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
