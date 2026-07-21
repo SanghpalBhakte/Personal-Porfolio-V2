@@ -14,6 +14,7 @@ import {
   SERVICES,
   SKILLS,
   BIO_PARAGRAPHS,
+  BUILDER_PRINCIPLES,
 } from './data/portfolio';
 
 const NAV_LINKS = [
@@ -60,7 +61,7 @@ export default function App() {
         <hr className="section-rule" aria-hidden="true" />
 
         {/* 5. About */}
-        <About meta={SITE_META} skills={SKILLS} bio={BIO_PARAGRAPHS} />
+        <About meta={SITE_META} skills={SKILLS} bio={BIO_PARAGRAPHS} principles={BUILDER_PRINCIPLES} />
 
       </main>
 

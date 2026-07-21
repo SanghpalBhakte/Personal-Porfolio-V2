@@ -178,7 +178,7 @@ export const GFX_PROJECTS = [
     title: 'Twitter Headers',
     description: 'Custom branding and banner design for Twitter profiles.',
     url: 'https://www.behance.net/gallery/113023791/Twitter-Headers',
-    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/465a3a113023791.Y3JvcCw5NjUsNzU0LDkwNSww.jpg'
+    image: 'https://mir-s3-cdn-cf.behance.net/projects/404/465a3a113023791.Y3JvcCw9NjUsNzU0LDkwNSww.jpg'
   },
   {
     id: 'irl-thumbnails',
@@ -194,4 +194,19 @@ export const GFX_PROJECTS = [
     url: 'https://www.behance.net/gallery/110221073/Fortnite-Thumbnails',
     image: 'https://mir-s3-cdn-cf.behance.net/projects/404/20a210110221073.Y3JvcCwxMDA3LDc4OCwzODksMA.png'
   }
+];
+
+export const BUILDER_PRINCIPLES = [
+  {
+    title: 'Testing flows obsessively',
+    detail: 'I test chatbot paths, automation steps, and edge cases repeatedly before shipping so systems just work.',
+  },
+  {
+    title: 'Boring systems over hype',
+    detail: 'I prioritize reliable background workflows that solve real friction over complex, fragile trends.',
+  },
+  {
+    title: 'Budget-conscious builds',
+    detail: 'Practical no-code/low-code foundations improved with custom code for high reliability on realistic budgets.',
+  },
 ];

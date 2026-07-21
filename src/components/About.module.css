@@ -18,9 +18,32 @@
 /* ── Bio column ── */
 .bioCol { display: flex; flex-direction: column; gap: var(--sp-6); }
 
+.builderHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--accent-light);
+  box-shadow: 0 4px 16px var(--accent-glow);
+  flex-shrink: 0;
+}
+
 .title {
   font-size: var(--text-3xl);
-  margin-bottom: var(--sp-2);
+  margin-bottom: 0;
 }
 
 .bio { display: flex; flex-direction: column; gap: var(--sp-5); }
@@ -29,6 +52,55 @@
   font-size: var(--text-base);
   color: var(--text-2);
   line-height: 1.75;
+}
+
+/* ── Principles Block (How I Work) ── */
+.principlesBlock {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  border-left: 3px solid var(--accent);
+}
+
+.principlesTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+
+.principlesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.principleItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  font-size: var(--text-sm);
+}
+
+.checkIcon {
+  color: var(--accent-light);
+  font-weight: 700;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+
+.principleText {
+  color: var(--text-2);
+  line-height: 1.6;
+}
+.principleText strong {
+  color: var(--text);
 }
 
 /* ── Skills column ── */
